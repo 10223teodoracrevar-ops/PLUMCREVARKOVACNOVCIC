@@ -1,0 +1,755 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* hover efekat */
+.card {
+    transition: 0.3s;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* lepši hero */
+section.bg-dark {
+    background: linear-gradient(to right, #000, #333);
+}
+.hero-section {
+    height: 90vh;
+    background: url("images/index-cover.jpg") center/cover no-repeat;
+    position: relative;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+#productmain {
+    background: url("images/android-box-bcg.jpg") center/cover no-repeat;
+    position: relative;
+}
+.btn-custom-color-lightpurple {
+    background-color: #BC92C8;
+    color: white;
+}
+.btn-custom-color-lightpurple:hover {
+    background-color: #46364d;
+    color: white;
+}
+.text-purple {
+    color: #4b2e83;
+}
+
+.text-whitee {
+    color: #ffffff;
+}
+
+/* ikone */
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+/* hover efekat */
+.border {
+    transition: 0.3s;
+}
+
+.border:hover {
+    background-color: #f8f9fa;
+    transform: scale(1.03);
+}
+
+/* ljubičasta kartica */
+.products-box {
+    background: linear-gradient(135deg, #4b2e83, #6a3db8);
+}
+
+/* zelena kartica */
+.solutions-box {
+    background: linear-gradient(135deg, #00b894, #00d084);
+}
+
+/* ljubičasta boja teksta */
+.text-purple {
+    color: #4b2e83;
+}
+
+/* hover */
+.products-box:hover,
+.solutions-box:hover {
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+
+        /* Prilagođene boje na osnovu dizajna */
+        .bg-plum-dark1 { background-color: #120e1e; } /* Najtamnija pozadina (Hero deo) */
+        .bg-plum-purple1 { background-color: #392c6b; } /* Srednja ljubičasta (Srednji delovi) */
+        .text-plum-purple1 { color: #392c6b; }
+        .text-plum-green1 { color: #00e573; }
+        .bg-plum-green-gradien1t { background: linear-gradient(135deg, #0cd877 0%, #089c56 100%); }
+        
+        /* Stilizacija linkova sa zelenom linijom ispod */
+        .read-more-link {
+            text-decoration: none;
+            color: #BC92C8;
+            border-bottom: 2px solid #00e573;
+            padding-bottom: 2px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        .read-more-link:hover {
+            color: #00e573;
+        }
+
+        /* Sekcije razmaci */
+        .section-padding { padding-top: 5rem; padding-bottom: 5rem; }
+
+        /* Prilagođene boje i pozadine */
+        .bg-plum-dark { background-color: #120e1e; }
+        .bg-card-dark { background-color: #1c182b; } /* Boja kartica */
+        .text-plum-green { color: #00e573; }
+        .bg-plum-green-gradient { background-image: url('https://plumitv.com/images/green-bck.jpg'); }
+        .bg-plum-green { background-color: #00e573; border-color: #00e573; color: #fff;}
+        .bg-plum-green:hover { background-color: #00c462; border-color: #00c462; color: #fff; }
+
+        /* Hero sekcija (sa prostorom za preklapanje kartice) */
+        .hero-section2 {
+            /* Ovde mozes ubaciti pozadinsku sliku */
+            background-image: linear-gradient(rgba(18, 14, 30, 0.8), rgba(18, 14, 30, 0.9)), url('https://plumitv.com/images/prices-bcg.jpg');
+            background-size: cover;
+            background-position: center;
+            padding-top: 6rem;
+            padding-bottom: 12rem; /* Veliki donji padding zbog kartice koja se preklapa */
+        }
+
+        /* Lista sa zelenim strelicama */
+        .custom-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .custom-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .custom-list li::before {
+            content: "❯"; /* Ili iskoristi FontAwesome ikonu */
+            position: absolute;
+            left: 0;
+            color: #00e573;
+            font-size: 0.8rem;
+            top: 4px;
+        }
+
+        /* Preklapanje glavne kartice */
+        .overlap-cards {
+            margin-top: -8rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Citat */
+        .testimonial-text {
+            font-family: Georgia, serif;
+            font-style: italic;
+            color: #392c6b;
+            font-size: 1.4rem;
+            line-height: 1.6;
+        }
+        .quote-marks {
+            color: #00e573;
+            font-size: 3rem;
+            line-height: 0;
+            vertical-align: middle;
+        }
+        .testimonial-border {
+            border-right: 2px solid #00e573; /* Zelena linija desno na desktopu */
+        }
+        @media (max-width: 768px) {
+            .testimonial-border {
+                border-right: none;
+                border-bottom: 2px solid #00e573; /* Zelena linija ispod na mobilnim uređajima */
+            }
+        }
+        .purp{
+            background-image : url('https://plumitv.com/images/footer-bcg.jpg');
+        }
+
+        /* Osnovna stilizacija footera sa 'ftr-' prefiksom */
+        .ftr-section {
+            background-color: #1a1625; /* Tamno ljubičasta/siva sa screenshota */
+            color: #ffffff;
+            position: relative;
+            overflow: hidden;
+            padding-top: 4rem;
+            padding-bottom: 2rem;
+            font-family: sans-serif;
+        }
+
+        /* Bledi krugovi u pozadini (čist CSS) */
+        .ftr-section::before {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            left: -10%;
+            width: 600px;
+            height: 600px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: 50%;
+            z-index: 0;
+            pointer-events: none;
+            background-image: url('https://plumitv.com/images/footer-bcg.jpg');
+        }
+        .ftr-section::after {
+            content: '';
+            position: absolute;
+            bottom: -40%;
+            left: -20%;
+            width: 1000px;
+            height: 1000px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 50%;
+            z-index: 0;
+            pointer-events: none;
+            background-image: url('https://plumitv.com/images/footer-bcg.jpg');
+        }
+
+        /* Da bi tekst bio iznad krugova */
+        .ftr-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Stilizacija glavnih linkova */
+        .ftr-links {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+        .ftr-links > li {
+            margin-bottom: 1rem;
+        }
+        .ftr-links a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+        .ftr-links a:hover {
+            color: #00e573;
+        }
+
+        /* Stilizacija podmenija (Products -> Transcoder, Apps...) */
+        .ftr-sublinks {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 1rem;
+        }
+        .ftr-sublinks li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+        }
+        .ftr-sublinks li::before {
+            content: "▷"; /* Zelena strelica */
+            color: #00e573;
+            margin-right: 10px;
+            font-size: 0.85rem;
+        }
+        .ftr-sublinks a {
+            color: #8a8794; /* Sivi tekst */
+            font-size: 0.85rem;
+            text-transform: uppercase;
+        }
+        .ftr-sublinks a:hover {
+            color: #ffffff;
+        }
+
+        /* Linije (dividers) */
+        .ftr-divider {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 2.5rem 0;
+        }
+
+        .ftr-text-plum-green { color: #00e573; }
+        .ftr-text-copyright { color: #8a8794; font-size: 0.85rem; }
+
+        .contact-hero {
+            /* Ovde ubaci sliku čoveka sa telefonom */
+            background-image: url('https://plumitv.com/images/contact-bcg.jpg');
+            background-size: cover;
+            background-position: center;
+            padding-top: 8rem;
+            padding-bottom: 12rem; /* Veliki padding zbog preklapanja forme */
+        }
+
+        /* Preklapanje forme */
+        .form-overlap {
+            margin-top: -8rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* --- STILIZACIJA FORME --- */
+        .custom-form-label {
+            color: #fff;
+            font-size: 0.85rem;
+            margin-bottom: 0.2rem;
+        }
+
+        /* Input polja (samo donja linija) */
+        .custom-input {
+            background-color: transparent !important;
+            border: none;
+            border-bottom: 1px solid #fff;
+            border-radius: 0;
+            color: #fff !important;
+            padding-left: 0;
+            box-shadow: none !important;
+        }
+        .custom-input:focus {
+            border-bottom: 2px solid #00e573;
+        }
+        .custom-input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: bold;
+        }
+
+        /* Textarea (okvir) */
+        .custom-textarea {
+            background-color: transparent !important;
+            border: 1px solid #fff;
+            border-radius: 4px;
+            color: #fff !important;
+            box-shadow: none !important;
+            padding: 0.75rem;
+        }
+        .custom-textarea:focus {
+            border-color: #00e573;
+        }
+        .custom-textarea::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: bold;
+        }
+
+        /* Select / Dropdown meni */
+        .custom-select {
+            background-color: transparent !important;
+            border: none;
+            border-bottom: 1px solid #fff;
+            border-radius: 0;
+            color: #fff !important;
+            padding-left: 0;
+            box-shadow: none !important;
+            font-weight: bold;
+            cursor: pointer;
+            /* Ikonica za dropdown (bela strelica) */
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            background-size: 16px 12px;
+            appearance: none;
+        }
+        .custom-select:focus {
+            border-bottom: 2px solid #00e573;
+        }
+        /* Padajući meni sa opcijama */
+        .custom-select option {
+            background-color: #1a1625; /* Tamna pozadina kao i forma */
+            color: #fff;
+            padding: 10px;
+        }
+
+        /* Error state (kada polje nije popunjeno) */
+        .is-invalid-custom {
+            border-color: #dc3545 !important; /* Crvena linija */
+        }
+        .error-message {
+            color: #dc3545;
+            font-size: 0.8rem;
+            margin-top: 5px;
+            display: none; /* Sakriveno po defaultu */
+        }
+         /* Osnovne boje za FAQ sekciju */
+        .faq-text-purple { color: #2a1b4d; } /* Tamno ljubičasta za naslove i tekst */
+        .faq-text-gray { color: #6c757d; font-size: 0.95rem; line-height: 1.6; }
+        .faq-text-green { color: #00e573; }
+        
+        .faq-section {
+            background-color: #ffffff;
+            position: relative;
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+            overflow: hidden;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        /* Dekorativni krug u pozadini */
+        .faq-bg-circle {
+            position: absolute;
+            top: 15%;
+            left: -15%;
+            width: 700px;
+            height: 700px;
+            border: 40px solid rgba(245, 245, 245, 0.6);
+            border-radius: 50%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .faq-container {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* --- STILIZACIJA LEVE NAVIGACIJE --- */
+        .faq-nav-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 2rem;
+        }
+        .faq-nav-list li {
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .faq-nav-list a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0;
+            color: #2a1b4d;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .faq-nav-list a:hover {
+            color: #00e573;
+        }
+        .faq-nav-arrow {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        /* --- STILIZACIJA AKORDIONA (DESNA STRANA) --- */
+        .faq-accordion-item {
+            margin-bottom: 1.5rem;
+            border: none;
+            background: transparent;
+        }
+        
+        .faq-accordion-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        /* Default stanje (Zatvoreno) - Zelena boja */
+        .faq-pill {
+            flex-grow: 1;
+            background-color: #1dd26e;
+            color: #ffffff;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .faq-pill-btn {
+            background-color: #1dd26e;
+            color: #1a1625;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 400;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* CSS trik za menjanje + u - */
+        .faq-pill-btn::after {
+            content: '+';
+        }
+
+        /* Hover stanje za zatvorenu formu */
+        .faq-accordion-header:not([aria-expanded="true"]):hover .faq-pill,
+        .faq-accordion-header:not([aria-expanded="true"]):hover .faq-pill-btn {
+            background-color: #0bd874;
+        }
+
+        /* AKTIVNO STANJE (Otvoreno) - Tamno ljubičasta boja */
+        .faq-accordion-header[aria-expanded="true"] .faq-pill {
+            background-color: #2a1b4d;
+            color: #ffffff;
+        }
+        .faq-accordion-header[aria-expanded="true"] .faq-pill-btn {
+            background-color: #2a1b4d;
+            color: #ffffff;
+        }
+        .faq-accordion-header[aria-expanded="true"] .faq-pill-btn::after {
+            content: '–'; /* Minus znak kada je otvoreno */
+        }
+
+        /* Sadržaj akordiona (pitanja i odgovori) */
+        .faq-accordion-body {
+            padding: 2rem 1rem 1rem 2rem;
+        }
+        .faq-qa-block {
+            margin-bottom: 2rem;
+        }
+        
+        /* Stilizacija Q i A teksta sa slike */
+        .faq-question {
+            color: #2a1b4d;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: flex-start;
+        }
+        .faq-question span {
+            color: #1dd26e; /* Zeleno Q. */
+            margin-right: 8px;
+            font-weight: 800;
+        }
+        
+        .faq-answer {
+            color: #6c757d;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            display: flex;
+            align-items: flex-start;
+        }
+        .faq-answer span {
+            color: #1dd26e; /* Zeleno A. */
+            margin-right: 8px;
+            font-weight: 800;
+        }
+
+        :root {
+            --plum-dark: #1a1625;
+            --plum-purple: #2a1b4d;
+            --plum-green: #00e573;
+            --plum-gray: #6c757d;
+            --plum-light: #f8f9fa;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 800;
+        }
+
+        /* --- LEAF ICON (Zeleni list) --- */
+        .leaf-icon {
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        /* --- LINKOVI SA STRELICOM --- */
+        .arrow-link {
+            display: inline-flex;
+            align-items: center;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 1.5rem;
+            transition: color 0.3s;
+        }
+        .arrow-link::after {
+            content: '→';
+            margin-left: 8px;
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+        .arrow-link.dark { color: var(--plum-purple); }
+        .arrow-link:hover { color: var(--plum-green); }
+
+        /* --- HERO SEKCIJA --- */
+        .sol-hero {
+            background-color: var(--plum-purple);
+            background-image: url('https://plumitv.com/images/top_section_bcg.jpg');
+            padding: 8rem 0;
+            color: #ffffff;
+            text-align: center;
+            position: relative;
+        }
+        .sol-hero h1 {
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+        .sol-hero p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        /* --- INTRO TEKST --- */
+        .sol-intro {
+            padding: 5rem 0;
+            background-color: #ffffff;
+        }
+        .sol-intro h3 {
+            color: var(--plum-purple);
+            font-size: 1.5rem;
+            line-height: 1.4;
+            margin-bottom: 1rem;
+        }
+
+        /* --- PROVIDERS SEKCIJA (Preklapanje slike) --- */
+        .sol-providers {
+            background-color: var(--plum-light);
+            padding: 5rem 0 8rem 0;
+            position: relative;
+        }
+        .sol-providers-title {
+            color: var(--plum-purple);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+        .sol-img-devices {
+            margin-top: -100px; /* Preklapanje na gornju sekciju */
+            max-width: 120%; /* Malo veće da izađe van okvira levo */
+            transform: translateX(-10%);
+        }
+
+        /* --- HOSPITALITY SEKCIJA (Slika i bela kartica) --- */
+        .sol-hospitality {
+            padding: 5rem 0;
+            background-color: #ffffff;
+        }
+        .hospitality-img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .hospitality-card {
+            background: #ffffff;
+            padding: 3.5rem;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            position: relative;
+            z-index: 2;
+        }
+        @media (min-width: 992px) {
+            .hospitality-card {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 90%;
+            }
+        }
+        .hospitality-card h3 {
+            color: var(--plum-purple);
+            margin-bottom: 1rem;
+        }
+
+        /* --- ANDROID BOX SEKCIJA --- */
+        .sol-box {
+            background-color: var(--plum-dark);
+            padding: 6rem 0;
+            color: #ffffff;
+        }
+        .sol-box h2 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .sol-box h5 {
+            color: var(--plum-green);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+        }
+        .sol-box p {
+            color: #a0a0a0;
+            line-height: 1.8;
+        }
+
+        /* --- REFERENCE --- */
+        .sol-references {
+            padding: 5rem 0;
+            background-color: #ffffff;
+            text-align: center;
+        }
+        .sol-references h3 {
+            color: var(--plum-purple);
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .sol-references p {
+            max-width: 800px;
+            margin: 0 auto 3rem auto;
+        }
+        .client-logo {
+            filter: grayscale(100%);
+            opacity: 0.6;
+            transition: all 0.3s ease;
+            max-width: 150px;
+            margin: 0 auto;
+            display: block;
+        }
+        .client-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        /* --- ZELENI CTA BANER --- */
+        .sol-cta {
+            background-image: url('https://plumitv.com/images/green-bck.jpg');
+            padding: 4rem 0;
+            text-align: center;
+            color: #ffffff;
+        }
+        .sol-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .btn-quote {
+            background-color: #ffffff;
+            color: var(--plum-green);
+            font-weight: 800;
+            text-transform: uppercase;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: inline-block;
+        }
+        .btn-quote:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            color: var(--plum-green);
+        }
